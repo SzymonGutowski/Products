@@ -1,0 +1,20 @@
+﻿@model Products.Models.Product
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h2>Dodanie formularza</h2>
+
+
+@using (Html.BeginForm("Add", "Warehouse", FormMethod.Post))
+{
+    @Html.ValidationSummary()
+
+    <span>Podaj imie</span>@Html.TextBoxFor(x => x.Name)
+    <span>Podaj opis</span>@Html.TextBoxFor(x => x.Description)
+    <span>Podaj cene</span>@Html.TextBoxFor(x => x.Price)
+
+    <button type="submit">Zatwierdź</button>
+}
+

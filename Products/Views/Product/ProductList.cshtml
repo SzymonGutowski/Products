@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Products.Models.Product>
+@{
+    ViewData["Title"] = "ProductList";
+}
+
+<h1>ProductList</h1>
+
+<p>
+    
+    @foreach (var product in Model)
+    if(product.Name == "Car")
+    {
+            <h2>@product.Id, @product.Name, @product.Description</h2>
+        }
+        else
+        {
+        <p>We don't see other cars</p>
+        }
+</p>
+
+
